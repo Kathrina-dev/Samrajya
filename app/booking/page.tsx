@@ -111,6 +111,35 @@ function BookingPageContent() {
     }
   }
 
+  function handleBlur(
+  e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+) {
+  const { name } = e.target
+
+  const payload: BookingPayload = {
+    fullName: form.fullName,
+    email: form.email,
+    phone: form.phone,
+    checkIn: form.checkIn,
+    checkOut: form.checkOut,
+    adults: parseInt(form.adults, 10) || 0,
+    children: parseInt(form.children, 10) || 0,
+    accommodation: form.accommodation,
+    message: form.message,
+  }
+
+  const validationErrors = validateBooking(payload)
+
+  const fieldName = name as keyof ValidationErrors
+
+  if (validationErrors[fieldName]) {
+    setErrors((prev) => ({
+      ...prev,
+      [fieldName]: validationErrors[fieldName],
+    }))
+  }
+}
+
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
 
@@ -131,6 +160,18 @@ function BookingPageContent() {
     const validationErrors = validateBooking(payload)
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
+
+      // Move focus to the first invalid field
+      const firstErrorField = Object.keys(
+        validationErrors
+      )[0]
+
+      requestAnimationFrame(() => {
+        document
+          .getElementById(firstErrorField)
+          ?.focus()
+      })
+
       return
     }
 
@@ -317,6 +358,7 @@ function BookingPageContent() {
                           error={errors.fullName}
                           autoComplete="name"
                           required
+                          onBlur={handleBlur}
                         />
                         <Field
                           label="Email"
@@ -327,6 +369,7 @@ function BookingPageContent() {
                           error={errors.email}
                           autoComplete="email"
                           required
+                          onBlur={handleBlur}
                         />
                         <Field
                           label="Phone Number"
@@ -336,7 +379,11 @@ function BookingPageContent() {
                           onChange={handleChange}
                           error={errors.phone}
                           autoComplete="tel"
+                          inputMode="tel"
+                          maxLength={20}
+                          placeholder="+91 98765 43210"
                           required
+                          onBlur={handleBlur}
                         />
                       </div>
                     </fieldset>
@@ -359,6 +406,7 @@ function BookingPageContent() {
                           error={errors.checkIn}
                           min={today}
                           required
+                          onBlur={handleBlur}
                         />
                         <Field
                           label="Check-out"
@@ -369,6 +417,7 @@ function BookingPageContent() {
                           error={errors.checkOut}
                           min={form.checkIn || today}
                           required
+                          onBlur={handleBlur}
                         />
                         <Field
                           label="Adults"
@@ -379,6 +428,7 @@ function BookingPageContent() {
                           error={errors.adults}
                           min="1"
                           required
+                          onBlur={handleBlur}
                         />
                         <Field
                           label="Children"
@@ -388,6 +438,7 @@ function BookingPageContent() {
                           onChange={handleChange}
                           error={errors.children}
                           min="0"
+                          onBlur={handleBlur}
                         />
                       </div>
                     </fieldset>
@@ -539,39 +590,82 @@ interface FieldProps {
   required?: boolean
   autoComplete?: string
   min?: string
+  maxLength?: number
+  inputMode?: 'text' | 'numeric' | 'tel' | 'email' | 'decimal'
+  placeholder?: string
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
 }
 
-function Field({ label, name, type, value, onChange, error, required, autoComplete, min }: FieldProps) {
+function Field({
+  label,
+  name,
+  type,
+  value,
+  onChange,
+  error,
+  required,
+  autoComplete,
+  min,
+  maxLength,
+  inputMode,
+  placeholder,
+  onBlur,
+}: FieldProps) {
   const errorId = `${name}-error`
 
   return (
     <div>
-      <label htmlFor={name} className="block text-sm font-medium text-forest-deep/80 mb-3">
+      <label
+        htmlFor={name}
+        className="block text-sm font-medium text-forest-deep/80 mb-3"
+      >
         {label}
-        {required && <span className="text-sage ml-1">*</span>}
+        {required && (
+          <span className="text-sage ml-1">*</span>
+        )}
       </label>
+
       <input
         id={name}
         name={name}
         type={type}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
         required={required}
         autoComplete={autoComplete}
         min={min}
+        maxLength={maxLength}
+        inputMode={inputMode}
+        placeholder={placeholder}
         aria-describedby={error ? errorId : undefined}
-        aria-invalid={error ? 'true' : undefined}
+        aria-invalid={error ? 'true' : 'false'}
         className={`
           w-full bg-ivory-soft border
-          ${error ? 'border-red-400' : 'border-sand/60'}
+          ${error
+            ? 'border-red-400 bg-red-50/30'
+            : 'border-sand/60'
+          }
           text-forest-deep px-5 py-4 text-base
-          focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage
-          transition-colors rounded-none
-          disabled:opacity-50 disabled:cursor-not-allowed
+          focus:outline-none
+          focus:ring-1
+          ${error
+            ? 'focus:ring-red-300 focus:border-red-400'
+            : 'focus:ring-sage focus:border-sage'
+          }
+          transition-all duration-200
+          rounded-none
+          disabled:opacity-50
+          disabled:cursor-not-allowed
         `}
       />
+
       {error && (
-        <p id={errorId} className="mt-2 text-sm text-red-600" role="alert">
+        <p
+          id={errorId}
+          className="mt-2 text-sm text-red-600"
+          role="alert"
+        >
           {error}
         </p>
       )}
