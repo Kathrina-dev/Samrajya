@@ -39,7 +39,7 @@ export default function FinalCTA() {
             Come away for a while.
           </h2>
           <Link 
-            href="#booking"
+            href="/booking"
             className="inline-block px-10 py-5 mt-8 bg-ivory-soft text-forest-deep text-sm uppercase tracking-widest font-medium hover:bg-white transition-colors duration-300"
           >
             Book Your Stay

@@ -135,7 +135,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="#booking"
+              href="/booking"
               className="
                 px-6 py-3
                 md:px-8 md:py-4

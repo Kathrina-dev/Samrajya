@@ -30,8 +30,12 @@
   }
 }
 
-html, body, #__next {
-  height: 100%;
+
+
+@layer base {
+  html, body {
+    @apply min-h-screen bg-background text-foreground;
+  }
 }
 
 body {

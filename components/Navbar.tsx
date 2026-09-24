@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Desktop CTA & Mobile Toggle */}
         <div className="flex items-center gap-6 z-50">
           <Link 
-            href="#booking"
+            href="/booking"
             className={`hidden lg:block text-xs uppercase tracking-widest px-6 py-3 border transition-colors duration-300 ${
               isScrolled 
                 ? 'border-forest-deep text-forest-deep hover:bg-forest-deep hover:text-ivory-soft'
@@ -124,7 +124,7 @@ export default function Navbar() {
                 className="w-full mt-8"
               >
                 <Link 
-                  href="#booking"
+                  href="/booking"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-center text-sm uppercase tracking-widest px-6 py-4 bg-forest-deep text-ivory-soft border border-forest-deep"
                 >
