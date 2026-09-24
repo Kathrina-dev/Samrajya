@@ -8,19 +8,19 @@ const diningSpaces = [
     name: 'The Restaurant',
     description:
       'A welcoming dining space where good food, relaxed moments and the natural character of the resort come together around the table.',
-    image: '/resto.jpg',
+    image: '/resto.webp',
   },
   {
     name: 'Prakruti',
     description:
       'An expressive dining setting surrounded by the spirit of the resort, created for unhurried meals and memorable moments.',
-    image: '/dining.png',
+    image: '/dining.webp',
   },
   {
     name: 'Vruksha Vedika',
     description:
       'A distinctive outdoor setting beneath the mango trees, bringing dining closer to nature in a peaceful and intimate atmosphere.',
-    image: '/outdoor-dining.png',
+    image: '/outdoor-dining.webp',
   }
 ]
 

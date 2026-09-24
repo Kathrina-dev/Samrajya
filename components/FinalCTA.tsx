@@ -16,7 +16,7 @@ export default function FinalCTA() {
         viewport={{ once: true }}
       >
         <Image
-          src="/dusk.JPG"
+          src="/dusk.webp"
           alt="Resort pathway at dusk"
           fill
           className="object-cover"

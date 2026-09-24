@@ -7,29 +7,29 @@ const galleryCategories = [
   {
     title: 'The Property',
     images: [
-      { id: 'p1', src: '/property.jpg', alt: 'Property view 1', className: 'col-span-12 md:col-span-7 h-[50vh]' },
-      { id: 'p2', src: '/seating.JPG', alt: 'Property view 2', className: 'col-span-12 md:col-span-5 h-[50vh]' },
+      { id: 'p1', src: '/property.webp', alt: 'Property view 1', className: 'col-span-12 md:col-span-7 h-[50vh]' },
+      { id: 'p2', src: '/seating.webp', alt: 'Property view 2', className: 'col-span-12 md:col-span-5 h-[50vh]' },
     ]
   },
   {
     title: 'Stay',
     images: [
-      { id: 's1', src: '/bed.JPG', alt: 'Stay view 1', className: 'col-span-12 md:col-span-5 h-[60vh]' },
-      { id: 's2', src: '/bath.JPG', alt: 'Stay view 2', className: 'col-span-12 md:col-span-7 h-[60vh]' },
+      { id: 's1', src: '/bed.webp', alt: 'Stay view 1', className: 'col-span-12 md:col-span-5 h-[60vh]' },
+      { id: 's2', src: '/bath.webp', alt: 'Stay view 2', className: 'col-span-12 md:col-span-7 h-[60vh]' },
     ]
   },
   {
     title: 'Dining',
     images: [
-      { id: 'd1', src: '/dining-hall.JPG', alt: 'Dining view 1', className: 'col-span-12 md:col-span-6 h-[50vh]' },
-      { id: 'd2', src: '/dining-hall-2.JPG', alt: 'Dining view 2', className: 'col-span-12 md:col-span-6 h-[50vh]' },
+      { id: 'd1', src: '/dining-hall.webp', alt: 'Dining view 1', className: 'col-span-12 md:col-span-6 h-[50vh]' },
+      { id: 'd2', src: '/dining-hall-2.webp', alt: 'Dining view 2', className: 'col-span-12 md:col-span-6 h-[50vh]' },
     ]
   },
   {
     title: 'Experiences & Celebrations',
     images: [
-      { id: 'e1', src: '/stage.JPG', alt: 'Experience view 1', className: 'col-span-12 md:col-span-8 h-[60vh]' },
-      { id: 'e2', src: '/cricket.png', alt: 'Celebration view 1', className: 'col-span-12 md:col-span-4 h-[60vh]' },
+      { id: 'e1', src: '/stage.webp', alt: 'Experience view 1', className: 'col-span-12 md:col-span-8 h-[60vh]' },
+      { id: 'e2', src: '/cricket2.webp', alt: 'Celebration view 1', className: 'col-span-12 md:col-span-4 h-[60vh]' },
     ]
   }
 ]

@@ -89,7 +89,7 @@ export default function IntroSection() {
           >
             {/* Desktop / Laptop */}
             <Image
-              src="/reception.jpg"
+              src="/reception.webp"
               alt="Resort reception and lobby area"
               fill
               className="hidden md:block object-cover"
@@ -98,7 +98,7 @@ export default function IntroSection() {
 
             {/* Mobile: Changed object-contain to object-cover to prevent blank top/bottom margins */}
             <Image
-              src="/reception2.jpg"
+              src="/reception2.webp"
               alt="Resort reception and lobby area"
               fill
               className="block md:hidden object-cover"

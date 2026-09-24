@@ -10,42 +10,42 @@ const accommodations = [
     name: 'Cowboy Villa',
     description:
       'A distinctive stay designed for guests looking for a private escape with character, comfort and a sense of adventure.',
-    image: '/cowboy.jpg',
+    image: '/cowboy.webp',
   },
   {
     id: 'wooden-villa',
     name: 'Wooden Villa',
     description:
       'A warm and inviting retreat where natural textures and a peaceful setting create an easy connection with the outdoors.',
-    image: '/wooden.jpg',
+    image: '/wooden.webp',
   },
   {
     id: 'jungle-villa',
     name: 'Jungle Villa',
     description:
       'A nature-inspired retreat surrounded by greenery, offering a quiet setting to slow down and reconnect with the landscape.',
-    image: '/jungle.png',
+    image: '/jungle.webp',
   },
   {
     id: 'bali-villa',
     name: 'Bali Villa',
     description:
       'A relaxed tropical-inspired retreat that brings together an inviting atmosphere, thoughtful design and the tranquillity of the resort.',
-    image: '/bali.jpg',
+    image: '/bali.webp',
   },
   {
     id: 'hotel-rooms',
     name: 'Hotel Rooms',
     description:
       'Comfortable and thoughtfully designed rooms offering a peaceful place to unwind after a day spent exploring the resort.',
-    image: '/room.jpg',
+    image: '/room.webp',
   },
   {
     id: 'suite-rooms',
     name: 'Suite Rooms',
     description:
       'A more spacious retreat for guests seeking an elevated stay, with a calm atmosphere designed for lingering and unwinding.',
-    image: '/suite.JPG',
+    image: '/suite.webp',
   },
 ]
 
@@ -122,7 +122,7 @@ export default function RoomsSection() {
             >
               <div className="relative aspect-[4/5] md:aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/cowboy.jpg"
+                  src="/cowboy.webp"
                   alt="Cowboy Villa"
                   fill
                   className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
@@ -191,7 +191,7 @@ export default function RoomsSection() {
             >
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/wooden.jpg"
+                  src="/wooden.webp"
                   alt="Wooden Villa"
                   fill
                   className="object-cover transition-transform duration-[1.4s] group-hover:scale-[1.05]"
@@ -225,7 +225,7 @@ export default function RoomsSection() {
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/jungle.png"
+                  src="/jungle.webp"
                   alt="Jungle Villa"
                   fill
                   className="object-cover transition-transform duration-[1.4s] group-hover:scale-[1.05]"
@@ -265,7 +265,7 @@ export default function RoomsSection() {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/bali.jpg"
+                  src="/bali.webp"
                   alt="Bali Villa"
                   fill
                   className="object-cover transition-transform duration-[1.4s] group-hover:scale-[1.04]"
@@ -295,7 +295,7 @@ export default function RoomsSection() {
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/room.jpg"
+                  src="/room.webp"
                   alt="Hotel Rooms"
                   fill
                   className="object-cover transition-transform duration-[1.4s] group-hover:scale-[1.05]"
@@ -340,7 +340,7 @@ export default function RoomsSection() {
             <div className="md:col-span-6 group">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/suite.JPG"
+                  src="/suite.webp"
                   alt="Suite Rooms"
                   fill
                   className="object-cover transition-transform duration-[1.4s] group-hover:scale-[1.04]"

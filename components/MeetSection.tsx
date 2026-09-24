@@ -34,7 +34,7 @@ export default function MeetSection() {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Image
-            src="/meeting.JPG"
+            src="/meeting.webp"
             alt="The Board Room"
             fill
             className="object-cover"

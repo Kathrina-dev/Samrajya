@@ -272,7 +272,7 @@ function BookingPageContent() {
                 animate="visible"
               >
                 <Image
-                  src="/reception.jpg"
+                  src="/reception.webp"
                   alt="Samrajya Resort reception"
                   fill
                   className="object-cover"

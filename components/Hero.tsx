@@ -45,7 +45,7 @@ export default function Hero() {
           aria-label="Lush green forest resort in morning light"
           className="hidden absolute inset-0 w-full h-full object-cover md:block"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/hero.mov" type="video/mp4" />
         </video>
 
         {/* Mobile video */}
@@ -58,7 +58,7 @@ export default function Hero() {
           aria-label="Lush green forest resort in morning light"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         >
-          <source src="/hero-mobile.mp4" type="video/mp4" />
+          <source src="/hero-mobile.mov" type="video/mp4" />
         </video>
 
         {/* Dark overlay for readability */}

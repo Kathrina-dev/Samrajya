@@ -8,25 +8,25 @@ const eventSpaces = [
     name: 'Poolside',
     description:
       'From intimate ceremonies to vibrant celebrations, the poolside creates a beautiful setting where the occasion becomes part of the landscape.',
-    image: '/pool.png',
+    image: '/pool.webp',
   },
   {
     name: 'Main Hall / Banquet',
     description:
       'A versatile setting for gatherings, celebrations and special occasions, designed to bring people together in an elegant environment.',
-    image: '/hall.JPG',
+    image: '/hall.webp',
   },
   {
     name: 'Amrapali',
     description:
       'A dedicated gathering space within the resort, offering an inviting setting for celebrations, occasions and shared moments.',
-    image: '/lobby.JPG',
+    image: '/lobby.webp',
   },
   {
     name: 'Mehendi Room',
     description:
       'A dedicated space for intimate celebrations and traditional ceremonies, providing a comfortable setting for meaningful moments.',
-    image: '/salon.JPG',
+    image: '/salon.webp',
   }
 ]
 

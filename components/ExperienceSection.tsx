@@ -9,31 +9,31 @@ const experiences = [
     id: '01',
     title: 'Rain Dance',
     description: 'Turn up the music, step into the rain and let the afternoon unfold.',
-    image: '/rain.jpg'
+    image: '/rain.webp'
   },
   {
     id: '02',
     title: 'Cricket',
     description: 'Gather your people, pick a side and enjoy a game surrounded by the outdoors.',
-    image: '/cricket.jpg'
+    image: '/cricket.webp'
   },
   {
     id: '03',
     title: 'Birds',
     description: 'A quieter encounter with the natural life around the resort.',
-    image: '/bird.jpg'
+    image: '/bird.webp'
   },
   {
     id: '04',
     title: 'Outdoor Relaxation',
     description: '[Add description for outdoor seating areas]',
-    image: '/relax.jpg'
+    image: '/relax.webp'
   },
   {
     id: '05',
     title: 'Vruksha Vedika',
     description: 'Under the mango trees. Quiet, shaded, natural, intimate.',
-    image: '/vruksha.jpg'
+    image: '/vruksha.webp'
   }
 ]
 
