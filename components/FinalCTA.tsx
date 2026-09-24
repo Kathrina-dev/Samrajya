@@ -7,21 +7,37 @@ import Link from 'next/link'
 export default function FinalCTA() {
   return (
     <section className="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
+
       {/* Background with Zoom Effect on Scroll */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
         viewport={{ once: true }}
       >
+
+        {/* Desktop */}
         <Image
           src="/dusk.webp"
           alt="Resort pathway at dusk"
           fill
-          className="object-cover"
+          className="hidden md:block object-cover"
           sizes="100vw"
+          priority
         />
+
+        {/* Mobile */}
+        <Image
+          src="/dusk-mobile.webp"
+          alt="Resort pathway at dusk"
+          fill
+          className="block md:hidden object-cover"
+          sizes="100vw"
+          priority
+        />
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-forest-dark/40 mix-blend-multiply" />
         <div className="absolute inset-0 bg-black/20" />
       </motion.div>
@@ -38,7 +54,8 @@ export default function FinalCTA() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-ivory-soft mb-6 leading-[1.1]">
             Come away for a while.
           </h2>
-          <Link 
+
+          <Link
             href="/booking"
             className="inline-block px-10 py-5 mt-8 bg-ivory-soft text-forest-deep text-sm uppercase tracking-widest font-medium hover:bg-white transition-colors duration-300"
           >
